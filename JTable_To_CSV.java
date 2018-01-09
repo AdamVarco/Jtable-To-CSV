@@ -160,7 +160,7 @@ public class JTable_To_CSV extends javax.swing.JFrame {
 
 			}
 		});
-
+                //generated code from eclipse
 		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
 		layout.setHorizontalGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup()
 				.addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup()
@@ -455,11 +455,20 @@ public class JTable_To_CSV extends javax.swing.JFrame {
 
 	private final String filepath = System.getProperty("user.home") + File.separator + "Desktop"+File.separator+"CSVDatabae.csv";
 	ArrayList<Object> arrList = new ArrayList<Object>();
-	private javax.swing.table.DefaultTableModel tableModel = new javax.swing.table.DefaultTableModel(new Object[][] {
-			{ "1", "DDFFD", "DGHYTGD", "344" }, { "2", "FGHTYH", "UYUYHF", "33" }, { "3", "JHGF", "JHGFD", "254" },
-			{ "4", "WQER", "OUYREE", "38" }, { "5", "BSGH", "IYDGH", "22" }, { "6", "QSDTYKJH", "PIHGDX", "16" },
-			{ "7", "DSZDD", "UTRFRT", "2567" }, { "8", "XCVBGR", "YTEUI", "56" }, { "9", "FGHJUY", "NGFDBNJ", "65" },
-			{ "10", "WQAZR", "VXWG", "42" } }, new String[] { "Id", "First Name", "Last Name", "Age" });
+	private javax.swing.table.DefaultTableModel tableModel = new javax.swing.table.DefaultTableModel(new Object[][] 
+		      {//object initalization 
+			{ "1", "DDFFD", "DGHYTGD", "344"}, 
+		        { "2", "FGHTYH", "UYUYHF", "33"}, 
+		        { "3", "JHGF", "JHGFD", "254"},
+			{ "4", "WQER", "OUYREE", "38"}, 
+		        { "5", "BSGH", "IYDGH", "22"}, 
+		        { "6", "QSDTYKJH", "PIHGDX", "16"},
+			{ "7", "DSZDD", "UTRFRT", "2567"}, 
+		        { "8", "XCVBGR", "YTEUI", "56"}, 
+		        { "9", "FGHJUY", "NGFDBNJ", "65"},
+			{ "10", "WQAZR", "VXWG", "42"} 
+	                 }, 
+			new String[] { "Id", "First Name", "Last Name", "Age" });
 
 	private javax.swing.JButton btnUpdateRow;
 	private javax.swing.JLabel jLabel1;

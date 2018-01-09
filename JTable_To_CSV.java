@@ -1,8 +1,5 @@
 package myPackage;
 
-import java.awt.Desktop;
-import java.awt.Dimension;
-import java.awt.Toolkit;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -10,8 +7,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -19,14 +14,9 @@ import java.util.TreeMap;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
-import javax.swing.table.TableRowSorter;
 import javax.swing.JButton;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.event.DocumentListener;
-import javax.swing.RowSorter;
-import javax.swing.SortOrder;
-import javax.swing.AbstractButton;
 import javax.swing.GroupLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -50,7 +40,7 @@ public class JTable_To_CSV extends javax.swing.JFrame {
 		initComponents();
   }
 
-	@SuppressWarnings("unchecked")
+	
 	// <editor-fold defaultstate="collapsed" desc="Generated Code">
 	private void initComponents() {
 
@@ -457,18 +447,18 @@ public class JTable_To_CSV extends javax.swing.JFrame {
 	ArrayList<Object> arrList = new ArrayList<Object>();
 	private javax.swing.table.DefaultTableModel tableModel = new javax.swing.table.DefaultTableModel(new Object[][] 
 		      {//object initalization 
-			{ "1", "DDFFD", "DGHYTGD", "344"}, 
-		        { "2", "FGHTYH", "UYUYHF", "33"}, 
-		        { "3", "JHGF", "JHGFD", "254"},
-			{ "4", "WQER", "OUYREE", "38"}, 
-		        { "5", "BSGH", "IYDGH", "22"}, 
-		        { "6", "QSDTYKJH", "PIHGDX", "16"},
-			{ "7", "DSZDD", "UTRFRT", "2567"}, 
-		        { "8", "XCVBGR", "YTEUI", "56"}, 
-		        { "9", "FGHJUY", "NGFDBNJ", "65"},
-			{ "10", "WQAZR", "VXWG", "42"} 
-	                 }, 
-			new String[] { "Id", "First Name", "Last Name", "Age" });
+			    {"1", "DDFFD", "DGHYTGD", "344"}, 
+		        {"2", "FGHTYH", "UYUYHF", "33"}, 
+		        {"3", "JHGF", "JHGFD", "254"},
+			    {"4", "WQER", "OUYREE", "38"}, 
+		        {"5", "BSGH", "IYDGH", "22"}, 
+		        {"6", "QSDTYKJH", "PIHGDX", "16"},
+			    {"7", "DSZDD", "UTRFRT", "2567"}, 
+		        {"8", "XCVBGR", "YTEUI", "56"}, 
+		        {"9", "FGHJUY", "NGFDBNJ", "65"},
+			    {"10", "WQAZR", "VXWG", "42"} 
+	                 }, //column names
+			new String[] {"Id", "First Name", "Last Name", "Age"});
 
 	private javax.swing.JButton btnUpdateRow;
 	private javax.swing.JLabel jLabel1;

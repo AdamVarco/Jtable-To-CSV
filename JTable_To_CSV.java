@@ -416,8 +416,8 @@ public class JTable_To_CSV extends javax.swing.JFrame {
 	}
 
 	/**
-	 * @param args
-	 *            the command line arguments
+	 * The Main method
+	 *
 	 */
 	public static void main(String args[]) {
 		try {

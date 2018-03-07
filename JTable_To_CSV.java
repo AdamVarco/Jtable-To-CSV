@@ -7,6 +7,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -32,6 +34,7 @@ public class JTable_To_CSV extends javax.swing.JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 3394160863695874427L;
+	private boolean sort = true;
 
 	/**
 	 * Creates new form Java_JTable_Update_Selected_Row_Using_TextBoxes
@@ -322,6 +325,7 @@ public class JTable_To_CSV extends javax.swing.JFrame {
 		
 	}
 	private void sortTable() {
+		
 		List<String> numdata = new ArrayList<String>();
 		for (int count = 0; count < tableModel.getRowCount(); count++) {
 			numdata.add(tableModel.getValueAt(count, 0).toString());
@@ -339,6 +343,8 @@ public class JTable_To_CSV extends javax.swing.JFrame {
 		}
 		tableModel.getDataVector().removeAllElements();
 		tableModel.fireTableDataChanged();
+		
+		if(sort == true) {
 		// sorts based on the map
 		Map<Integer, String> map = new TreeMap<Integer, String>();
 
@@ -349,7 +355,7 @@ public class JTable_To_CSV extends javax.swing.JFrame {
 			String value = y[1] + "," + y[2] + "," + y[3];
 			map.put(key, value);
 		}
-
+		
 		for (Map.Entry<Integer, String> entry : map.entrySet()) {
 			int key = entry.getKey();
 			String value = entry.getValue();
@@ -360,6 +366,32 @@ public class JTable_To_CSV extends javax.swing.JFrame {
 			jTextFieldAGE.setText(split[2]);
 			tableModel.addRow(new Object[] { jTextFieldID.getText(), jTextFieldFN.getText(),
 					jTextFieldLN.getText(), jTextFieldAGE.getText() });
+		 }
+		 sort = false;
+		}else {
+			Map<Integer, String> map = new TreeMap<Integer, String>(Collections.reverseOrder());
+
+			String[] s = stB.toString().split("\n");
+			for (int i = 0; i < s.length; i++) {
+				String[] y = s[i].split(",");
+				int key = Integer.parseInt(y[0]);
+				String value = y[1] + "," + y[2] + "," + y[3];
+				map.put(key, value);
+			}
+			
+			for (Map.Entry<Integer, String> entry : map.entrySet()) {
+				int key = entry.getKey();
+				String value = entry.getValue();
+				String[] split = value.split(",");
+				jTextFieldID.setText(key + "");
+				jTextFieldFN.setText(split[0]);
+				jTextFieldLN.setText(split[1]);
+				jTextFieldAGE.setText(split[2]);
+				tableModel.addRow(new Object[] { jTextFieldID.getText(), jTextFieldFN.getText(),
+						jTextFieldLN.getText(), jTextFieldAGE.getText() });
+			 }
+			sort = true;
+			
 		}
 		
 	}
@@ -416,8 +448,8 @@ public class JTable_To_CSV extends javax.swing.JFrame {
 	}
 
 	/**
-	 * The Main method
-	 *
+	 * @param args
+	 *            the command line arguments
 	 */
 	public static void main(String args[]) {
 		try {
